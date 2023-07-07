@@ -61,7 +61,6 @@ async function bootstrap() {
   process.on('uncaughtException', function () {});
 
   await app.listen(5000, '0.0.0.0', () => {});
-  console.log('Nest started...');
 }
 
 bootstrap().catch((err) => console.error(err));

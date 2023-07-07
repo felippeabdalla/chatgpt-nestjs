@@ -14,7 +14,7 @@ export class ChatGptService {
         'https://api.openai.com/v1/chat/completions',
         {
           model: 'gpt-3.5-turbo',
-          messages: [{ role: 'user', content: 'Say this is a test!' }],
+          messages: [{ role: 'user', content: prompt }],
           temperature: 1,
         },
         {

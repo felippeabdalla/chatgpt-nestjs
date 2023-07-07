@@ -3,7 +3,6 @@ import { json } from 'body-parser';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { ValidationPipe } from '@nestjs/common';
 import { AppModule } from './app.module';
-import { Logger } from '../infrastructure/logger/logger.service';
 import { HttpExceptionFilter } from '../infrastructure/filters/http-exception.filter';
 import * as fs from 'fs';
 
@@ -17,7 +16,6 @@ async function bootstrap() {
 
   app.useGlobalPipes(new ValidationPipe());
   app.use(json({ limit: '1mb' }));
-  //app.useLogger(app.get(Logger));
 
   app.use(function (req, res, next) {
     res.setHeader(

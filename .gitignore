@@ -35,8 +35,8 @@ lerna-debug.log*
 !.vscode/extensions.json
 
 # SSL
-# certificado.crt
-# chave-privada.key
+certificado.crt
+chave-privada.key
 
 # ENV
 .env
